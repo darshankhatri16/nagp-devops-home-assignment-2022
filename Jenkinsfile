@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Checkout code") {
             steps {
-                checkout scm
+                git branch: 'master', credentialsId: 'Git_Credentials', url: 'https://github.com/darshankhatri16/nagp-devops-home-assignment-2022'
             }
         }
         stage("Build image") {
